@@ -162,22 +162,10 @@ public class TaskImpl implements ITask, Comparable {
 
         return ITask.FAILED;
     }
-    /**
-     * Method isDependsCompleted.
-     * @return boolean
-     */
-/*
-    private boolean isDependsCompleted() {
-        Vector v = (Vector) getDependsFrom();
-        boolean check = true;
-        for (Enumeration en = v.elements(); en.hasMoreElements();) {
-            Task t = (Task) en.nextElement();
-            if (t.getStatus() != Task.COMPLETED)
-                check = false;
-        }
-        return check;
-    }
-*/
+    
+    // TASK 3-1 SMELL WITHIN A CLASS
+    // I deleted the "isDependsCompleted()" method because it is dead code
+    
     private boolean isFrozen() {
         return _element.getAttribute("frozen") != null;
     }
